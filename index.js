@@ -1,0 +1,1 @@
+console.log('I knew you would look here.\nThis is just a static website.')

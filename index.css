@@ -1,0 +1,333 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+    --gray-50: #fafaf9;
+    --gray-100:  #f5f5f4;
+    --gray-200: #e7e5e4;
+    --gray-300: #d6d3d1;
+    --gray-400: #a8a29e;
+    --gray-500: #78716c;
+    --gray-600: #57534e;
+    --gray-700: #44403c;
+    --gray-800: #44403c;
+    --gray-900: #1c1917;
+    --gray-950: #0c0a09;
+
+    --p-05: 0.5rem;
+    --p1: 1rem;
+    --p2: 1.5rem;
+    --p3: 2rem;
+    --p4: 2.5rem;
+    --p5: 3rem;
+    --p6: 3.5rem;
+    --p7: 4rem;
+    --p8: 4.5rem;
+    --p9: 5rem;
+
+    --m-05: 0.5rem;
+    --m1: 1rem;
+    --m2: 1.5rem;
+    --m3: 2rem;
+    --m4: 2.5rem;
+    --m5: 3rem;
+    --m6: 3.5rem;
+    --m7: 4rem;
+    --m8: 4.5rem;
+    --m9: 5rem;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./Inter.ttf");
+}
+
+@font-face {
+    font-family: "InterBold";
+    src: url("./Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: "InterMedium";
+    src: url("./Inter-Medium.ttf");
+}
+
+.font-normal {
+    font-family: 'Inter';
+}
+
+.font-medium {
+    font-family: 'InterMedium';
+}
+
+.font-bold {
+    font-family: 'InterMedium';
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-400) transparent;
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--gray-500);
+    border-radius: 999px;
+}
+
+/* Optional hover */
+*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--gray-700);
+}
+
+.bg-50 { background-color: var(--gray-50); }
+.bg-100 { background-color: var(--gray-100); }
+.bg-200 { background-color: var(--gray-200); }
+.bg-300 { background-color: var(--gray-300); }
+.bg-400 { background-color: var(--gray-400); }
+.bg-500 { background-color: var(--gray-500); }
+.bg-600 { background-color: var(--gray-600); }
+.bg-700 { background-color: var(--gray-700); }
+.bg-800 { background-color: var(--gray-800); }
+.bg-900 { background-color: var(--gray-900); }
+.bg-950 { background-color: var(--gray-950); }
+
+.text-50 { color: var(--gray-50); }
+.text-100 { color: var(--gray-100); }
+.text-200 { color: var(--gray-200); }
+.text-300 { color: var(--gray-300); }
+.text-400 { color: var(--gray-400); }
+.text-500 { color: var(--gray-500); }
+.text-600 { color: var(--gray-600); }
+.text-700 { color: var(--gray-700); }
+.text-800 { color: var(--gray-800); }
+.text-900 { color: var(--gray-900); }
+.text-950 { color: var(--gray-950); }
+
+.p {
+    padding: var(--p);
+}
+
+.p-05 { --p: var(--p-05); }
+.p-1  { --p: var(--p1); }
+.p-2  { --p: var(--p2); }
+.p-3  { --p: var(--p3); }
+.p-4  { --p: var(--p4); }
+.p-5  { --p: var(--p5); }
+.p-6  { --p: var(--p6); }
+.p-7  { --p: var(--p7); }
+.p-8  { --p: var(--p8); }
+.p-9  { --p: var(--p9); }
+
+.pt { padding-top: var(--p); }
+.pr { padding-right: var(--p); }
+.pb { padding-bottom: var(--p); }
+.pl { padding-left: var(--p); }
+.px { padding-left: var(--p); padding-right: var(--p); }
+.py { padding-top: var(--p); padding-bottom: var(--p); }
+
+.m {
+    padding: var(--m);
+}
+
+.m-05 { --m: var(--m-05); }
+.m-1  { --m: var(--m1); }
+.m-2  { --m: var(--m2); }
+.m-3  { --m: var(--m3); }
+.m-4  { --m: var(--m4); }
+.m-5  { --m: var(--m5); }
+.m-6  { --m: var(--m6); }
+.m-7  { --m: var(--m7); }
+.m-8  { --m: var(--m8); }
+.m-9  { --m: var(--m9); }
+
+.mt { padding-top: var(--m); }
+.mr { padding-right: var(--m); }
+.mb { padding-bottom: var(--m); }
+.ml { padding-left: var(--m); }
+.mx { padding-left: var(--m); padding-right: var(--m); }
+.my { padding-top: var(--m); padding-bottom: var(--m); }
+
+.font-05 { font-size: 0.8rem };
+.font-1 { font-size: 1rem };
+.font-2 { font-size: 1.5rem };
+.font-3 { font-size: 2rem };
+.font-4 { font-size: 2.5rem };
+.font-5 { font-size: 3rem };
+
+.border {
+    border: 0.07rem solid var(--gray-400);
+}
+
+.border-all {
+    border: 0.07rem solid var(--gray-400);
+}
+
+.border-y {
+    border-top: 0.07rem solid var(--gray-400);
+    border-bottom: 0.07rem solid var(--gray-400);
+}
+
+.border-x {
+    border-left: 0.07rem solid var(--gray-400);
+    border-right: 0.07rem solid var(--gray-400);
+}
+
+.border-l {
+    border-left: 0.07rem solid var(--gray-400);
+}
+
+.border-b {
+    border-bottom: 0.07rem solid var(--gray-400);
+}
+
+.border-r {
+    border-right: 0.07rem solid var(--gray-400);
+}
+
+.outline {
+    outline: 0.07rem solid var(--gray-400);
+}
+
+.text-gradient {
+    background-image: linear-gradient(
+        90deg,
+        var(--gray-800),
+        var(--gray-500)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+}
+
+.text-center {
+    text-align: center;
+}
+
+body, html {
+    background-color: var(--gray-200);
+    font-family: 'InterMedium';
+    overflow: hidden;
+}
+
+main {
+    height: 100vh;
+    height: 100svh;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    border: 0.07rem solid var(--gray-400);
+}
+
+#content {
+    height: calc(100vh - 20rem);
+    overflow-y: auto;
+}
+
+h1 {
+    font-family: 'Inter';
+}
+
+.flex-link {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+a {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    transition: background-color 0.2s;
+}
+
+a:hover {
+    background-color: var(--gray-300);
+}
+
+svg {
+    width: 62%;
+}
+
+a.normal-link {
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+}
+
+footer {
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items:center;
+    justify-content:center;
+}
