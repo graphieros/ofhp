@@ -140,6 +140,10 @@ table {
     background-color: var(--gray-700);
 }
 
+.bg-white {
+    background-color: #FFF;
+}
+
 .bg-50 {
     background-color: var(--gray-50);
 }
@@ -550,4 +554,72 @@ footer {
     gap: 2rem;
     align-items: center;
     justify-content: center;
+}
+
+.fancy-support {
+    background: var(--gray-600);
+    border-radius: 3px;
+}
+
+.fancy-button {
+    background: linear-gradient(to bottom, var(--gray-50), var(--gray-400));
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    border: 0.5px solid #00000090;
+    transition: transform 0.2s;
+}
+
+.fancy-button:hover {
+    transform: scale(0.95);
+}
+
+.z1 {
+    z-index: 10;
+}
+
+.bottom-shadow {
+    position: absolute;
+    pointer-events:none;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 6px);
+    background: linear-gradient(to bottom, #FFFFFF, var(--gray-200));
+    border-radius: 3px;
+}
+
+.bottom-shadow::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    background: linear-gradient(
+        to bottom, 
+        var(--gray-200) 10%, 
+        var(--gray-100) 40%,
+        var(--gray-50) 50%
+    );
+    border-radius: 8px;
+}
+.bottom-shadow::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #00000030, #00000000);
+    border-radius: 2px;
+}
+
+.fancy-label {
+    font-size: 9px;
+}
+
+strong {
+    font-weight: bold;
+    color: #000;
 }
