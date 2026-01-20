@@ -65,6 +65,18 @@ table {
     --gray-900: #1c1917;
     --gray-950: #0c0a09;
 
+    --blue-50:  #f3f6fe;
+    --blue-100: #e6edfd;
+    --blue-200: #cddcfb;
+    --blue-300: #a6bff7;
+    --blue-400: #7a9df2;
+    --blue-500: #5f8aee;
+    --blue-600: #4f75d4;
+    --blue-700: #3f5fb3;
+    --blue-800: #324a8a;
+    --blue-900: #263a6a;
+    --blue-950: #1a2747;
+
     --p-05: 0.5rem;
     --p1: 1rem;
     --p2: 1.5rem;
@@ -543,7 +555,10 @@ svg {
 a.normal-link {
     height: fit-content;
     width: fit-content;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
 }
 
 footer {
@@ -551,18 +566,12 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2rem;
     align-items: center;
     justify-content: center;
 }
 
-.fancy-support {
-    background: var(--gray-600);
-    border-radius: 3px;
-}
-
-.fancy-button {
-    background: linear-gradient(to bottom, var(--gray-50), var(--gray-400));
+.fancy-button,
+.fancy-button-blue {
     border-radius: 3px;
     position: relative;
     overflow: hidden;
@@ -570,7 +579,16 @@ footer {
     transition: transform 0.2s;
 }
 
-.fancy-button:hover {
+.fancy-button {
+    background: linear-gradient(to bottom, var(--gray-50), var(--gray-400));
+}
+
+.fancy-button-blue {
+    background: linear-gradient(to bottom, var(--gray-50), var(--gray-400));
+}
+
+.fancy-button:hover,
+.fancy-button-blue:hover {
     transform: scale(0.95);
 }
 
@@ -622,4 +640,9 @@ footer {
 strong {
     font-weight: bold;
     color: #000;
+}
+
+.fancy-support {
+    background: var(--gray-600);
+    border-radius: 3px;
 }
